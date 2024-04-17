@@ -10,29 +10,532 @@
 <body>
     <!--Inizio Header-->
     <header>
-        <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link " aria-current="page" href="#"> <i class="fa-solid fa-house"></i>  Dashboard</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="sponsorizzazione.html"> <i class="fa-solid fa-chart-line"></i>  Sponsorizzazioni</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="prodotti.html"> <i class="fa-solid fa-box-archive"></i>  Prodotti</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="prodotto2.html"> <i class="fa-solid fa-plus"></i>  Nuovo Prodotto</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"> <i class="fa-solid fa-user-tie"></i>  Clienti</a>
-            </li>
-          </ul>
+        <div class="container d-none d-sm-block d-sm-none d-md-block d-flex">
+            <div class="fs-5 ">
+                Bootstrap Dashboard
+            </div>
+            <ul class="nav flex-column bg-black flex-grow-1">
+                <li class="nav-item">
+                  <a class="nav-link " aria-current="page" href="#"> <i class="fa-solid fa-house"></i>  Dashboard</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="sponsorizzazione.html"> <i class="fa-solid fa-chart-line"></i>  Sponsorizzazioni</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="prodotti.html"> <i class="fa-solid fa-box-archive"></i>  Prodotti</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="prodotto2.html"> <i class="fa-solid fa-plus"></i>  Nuovo Prodotto</a>
+                </li>
+                <div class="dropdown mt-3">
+                    <button class="btn btn-secondary dropdown-toggle bg-transparent border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Mario Rossi
+                    </button>
+                    <ul class="dropdown-menu ">
+                      <li><a class="dropdown-item" href="#">Impostazioni</a></li>
+                      <li><a class="dropdown-item" href="#">Profilo</a></li>
+                      <hr>
+                      <li><a class="dropdown-item" href="#">Esci</a></li>
+                    </ul>
+                  </div>
+            </ul>
+        </div>
+        
+        <div class="container d-md-none d-lg-none d-xl-none ">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+                <div class="container-fluid ">
+                  <a class="navbar-brand" href="#">Bootstrap Dashboard</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                      <a class="nav-link " aria-current="page" href="#">Dashboard</a>
+                      <a class="nav-link" href="sponsorizzazione.html">Sponsorizzazione</a>
+                      <a class="nav-link active" href="prodotti.html">Prodotti</a>
+                      <a class="nav-link" href="prodotto2.html">Nuovo prodotto</a>
+                      <a class="nav-link" aria-current="page" href="#">Clienti</a>
+                      <a class="nav-link mt-3" href="#">Impostazioni</a>
+                      <a class="nav-link" href="#">Profilo</a>
+                      <a class="nav-link" href="#">Esci</a>
+                    </div>
+                  </div>
+                </div>
+            </nav>
+        </div>
+        
+
 
     </header>
     <!--Fine Header-->
 
     <!--Inizio Main-->
     <main>
+        <div class="container-fluid">
+            <div class="row justify-content-between">
+                <div class="col-10 display-4 fs-1 fw-bolder">
+                    10 Prodotti Trovati
+                </div>
+                <div class="col-2">
+                    <div class="btn-group mt-2" role="group" aria-label="Basic example">
+                        <button type="button" class="btn order order border-secondary text-secondary-emphasis">Esporta</button>
+                        <button type="button" class="btn order order border-secondary text-secondary-emphasis">Nuovo</button>
+                    </div>
+                </div>
+              </div>
+              <hr>
+        </div>
+
+        <div class="container-fluid mt-4">
+            <div class="row justify-content-between">
+                <div class="col-10 display-4 fs-4 fw-bolder">
+                    Nome
+                </div>
+                <div class="col-2 d-flex flex-row justify-content-between">
+                    <div class="fw-bolder">
+                        Prezzo
+                    </div>
+                    <div class="fw-bolder">
+                        Stato
+                    </div>
+                    <div class="fw-bolder">
+                        Azioni
+                    </div>
+                </div>
+            </div>  
+            <hr>    
+        </div>
+
+        <div class="container-fluid mt-4">
+            <div class="row justify-content-between">
+                <div class="col-10 display-4 fs-4 fw-bolder">
+                    Nome
+                </div>
+                <div class="col-2 d-flex flex-row justify-content-between">
+                    <div class="">
+                        799.00 € 
+                    </div>
+                    <div class="fw-bolder">
+                        Stato
+                    </div>
+                    <div class="fw-bolder">
+                        <button type="button" class="btn btn-outline-info btn-sm">
+                            <i class="fa-solid fa-pencil"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5 fw-bolder" id="exampleModalLabel">Elimina Prodotto</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    L'Eliminazione sarà irreversibile
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Si, continua</button>
+                                    <button type="button" class="btn btn-primary">Annulla</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr> 
+        </div>
+           
+    <div class="container-fluid mt-4">
+        <div class="row justify-content-between">
+            <div class="col-10 display-4 fs-4 fw-bolder">
+                Nome
+            </div>
+            <div class="col-2 d-flex flex-row justify-content-between">
+                <div class="">
+                    1299.00 € 
+                </div>
+                <div class="fw-bolder">
+                    Stato
+                </div>
+                <div class="fw-bolder">
+                    <button type="button" class="btn btn-outline-info btn-sm">
+                        <i class="fa-solid fa-pencil"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5 fw-bolder" id="exampleModalLabel">Elimina Prodotto</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                L'Eliminazione sarà irreversibile
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Si, continua</button>
+                                <button type="button" class="btn btn-primary">Annulla</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>  
+    </div>
+
+    <div class="container-fluid mt-4">
+        <div class="row justify-content-between">
+            <div class="col-10 display-4 fs-4 fw-bolder">
+                Nome
+            </div>
+            <div class="col-2 d-flex flex-row justify-content-between">
+                <div class="">
+                    1299.00 € 
+                </div>
+                <div class="fw-bolder">
+                    Stato
+                </div>
+                <div class="fw-bolder">
+                    <button type="button" class="btn btn-outline-info btn-sm">
+                        <i class="fa-solid fa-pencil"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5 fw-bolder" id="exampleModalLabel">Elimina Prodotto</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                L'Eliminazione sarà irreversibile
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Si, continua</button>
+                                <button type="button" class="btn btn-primary">Annulla</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>  
+    </div>
+
+    <div class="container-fluid mt-4">
+        <div class="row justify-content-between">
+            <div class="col-10 display-4 fs-4 fw-bolder">
+                Nome
+            </div>
+            <div class="col-2 d-flex flex-row justify-content-between">
+                <div class="">
+                    1299.00 € 
+                </div>
+                <div class="fw-bolder">
+                    Stato
+                </div>
+                <div class="fw-bolder">
+                    <button type="button" class="btn btn-outline-info btn-sm">
+                        <i class="fa-solid fa-pencil"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5 fw-bolder" id="exampleModalLabel">Elimina Prodotto</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                L'Eliminazione sarà irreversibile
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Si, continua</button>
+                                <button type="button" class="btn btn-primary">Annulla</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>  
+    </div>
+
+    <div class="container-fluid mt-4">
+        <div class="row justify-content-between">
+            <div class="col-10 display-4 fs-4 fw-bolder">
+                Nome
+            </div>
+            <div class="col-2 d-flex flex-row justify-content-between">
+                <div class="">
+                    1299.00 € 
+                </div>
+                <div class="fw-bolder">
+                    Stato
+                </div>
+                <div class="fw-bolder">
+                    <button type="button" class="btn btn-outline-info btn-sm">
+                        <i class="fa-solid fa-pencil"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5 fw-bolder" id="exampleModalLabel">Elimina Prodotto</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                L'Eliminazione sarà irreversibile
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Si, continua</button>
+                                <button type="button" class="btn btn-primary">Annulla</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>  
+    </div>
+
+    <div class="container-fluid mt-4">
+        <div class="row justify-content-between">
+            <div class="col-10 display-4 fs-4 fw-bolder">
+                Nome
+            </div>
+            <div class="col-2 d-flex flex-row justify-content-between">
+                <div class="">
+                    1299.00 € 
+                </div>
+                <div class="fw-bolder">
+                    Stato
+                </div>
+                <div class="fw-bolder">
+                    <button type="button" class="btn btn-outline-info btn-sm">
+                        <i class="fa-solid fa-pencil"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5 fw-bolder" id="exampleModalLabel">Elimina Prodotto</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                L'Eliminazione sarà irreversibile
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Si, continua</button>
+                                <button type="button" class="btn btn-primary">Annulla</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>  
+    </div>
+
+    <div class="container-fluid mt-4">
+        <div class="row justify-content-between">
+            <div class="col-10 display-4 fs-4 fw-bolder">
+                Nome
+            </div>
+            <div class="col-2 d-flex flex-row justify-content-between">
+                <div class="">
+                    1299.00 € 
+                </div>
+                <div class="fw-bolder">
+                    Stato
+                </div>
+                <div class="fw-bolder">
+                    <button type="button" class="btn btn-outline-info btn-sm">
+                        <i class="fa-solid fa-pencil"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5 fw-bolder" id="exampleModalLabel">Elimina Prodotto</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                L'Eliminazione sarà irreversibile
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Si, continua</button>
+                                <button type="button" class="btn btn-primary">Annulla</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>  
+    </div>
+
+    <div class="container-fluid mt-4">
+        <div class="row justify-content-between">
+            <div class="col-10 display-4 fs-4 fw-bolder">
+                Nome
+            </div>
+            <div class="col-2 d-flex flex-row justify-content-between">
+                <div class="">
+                    1299.00 € 
+                </div>
+                <div class="fw-bolder">
+                    Stato
+                </div>
+                <div class="fw-bolder">
+                    <button type="button" class="btn btn-outline-info btn-sm">
+                        <i class="fa-solid fa-pencil"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5 fw-bolder" id="exampleModalLabel">Elimina Prodotto</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                L'Eliminazione sarà irreversibile
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Si, continua</button>
+                                <button type="button" class="btn btn-primary">Annulla</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>  
+    </div>
+
+    <div class="container-fluid mt-4">
+        <div class="row justify-content-between">
+            <div class="col-10 display-4 fs-4 fw-bolder">
+                Nome
+            </div>
+            <div class="col-2 d-flex flex-row justify-content-between">
+                <div class="">
+                    1299.00 € 
+                </div>
+                <div class="fw-bolder">
+                    Stato
+                </div>
+                <div class="fw-bolder">
+                    <button type="button" class="btn btn-outline-info btn-sm">
+                        <i class="fa-solid fa-pencil"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5 fw-bolder" id="exampleModalLabel">Elimina Prodotto</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                L'Eliminazione sarà irreversibile
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Si, continua</button>
+                                <button type="button" class="btn btn-primary">Annulla</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>  
+    </div>
+
+    <div class="container-fluid mt-4">
+        <div class="row justify-content-between">
+            <div class="col-10 display-4 fs-4 fw-bolder">
+                Nome
+            </div>
+            <div class="col-2 d-flex flex-row justify-content-between">
+                <div class="">
+                    1299.00 € 
+                </div>
+                <div class="fw-bolder">
+                    Stato
+                </div>
+                <div class="fw-bolder">
+                    <button type="button" class="btn btn-outline-info btn-sm">
+                        <i class="fa-solid fa-pencil"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5 fw-bolder" id="exampleModalLabel">Elimina Prodotto</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                L'Eliminazione sarà irreversibile
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Si, continua</button>
+                                <button type="button" class="btn btn-primary">Annulla</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>  
+    </div>
+        
 
     </main>
     <!--Fine Main-->
