@@ -9,64 +9,180 @@
 </head>
 <body>
     <!--Inizio Header-->
-    <header>
-        <div class="container-fluid d-none d-sm-block d-sm-none d-md-block d-flex">
-            <div class="fs-5 ">
-                Bootstrap Dashboard
-            </div>
-            <ul class="nav flex-column bg-black flex-grow-1">
-                <li class="nav-item">
-                  <a class="nav-link " aria-current="page" href="#"> <i class="fa-solid fa-house"></i>  Dashboard</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="sponsorizzazione.html"> <i class="fa-solid fa-chart-line"></i>  Sponsorizzazioni</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" href="prodotti.html"> <i class="fa-solid fa-box-archive"></i>  Prodotti</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="prodotto2.html"> <i class="fa-solid fa-plus"></i>  Nuovo Prodotto</a>
-                </li>
-                <div class="dropdown mt-3">
-                    <button class="btn btn-secondary dropdown-toggle bg-transparent border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Mario Rossi
-                    </button>
-                    <ul class="dropdown-menu ">
-                      <li><a class="dropdown-item" href="#">Impostazioni</a></li>
-                      <li><a class="dropdown-item" href="#">Profilo</a></li>
-                      <hr>
-                      <li><a class="dropdown-item" href="#">Esci</a></li>
-                    </ul>
-                  </div>
+    <main>
+      <!--Inizio navbar-->
+      <nav class="navbar bg-body-tertiary sticky-top bg-dark shadow d-md-none " data-bs-theme="dark" >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Bootstrap Dashboard</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex d-md-none">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="#">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="sponsorizzazione.html">Sponsorizzazioni</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="prodotti.html">Prodotti</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="prodotto2.html">Nuovo prodotto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Clienti</a>
+              </li>
+              <li class="nav-item">
+                <hr />
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Impostazioni</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Profilo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Esci</a>
+              </li>
             </ul>
+          </div>
         </div>
-        
-        <div class="container-flui d-md-none d-lg-none d-xl-none ">
-            <nav class="navbar navbar-expand-lg bg-body-tertiary ">
-                <div class="container-fluid ">
-                  <a class="navbar-brand" href="#">Bootstrap Dashboard</a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                      <a class="nav-link " aria-current="page" href="#">Dashboard</a>
-                      <a class="nav-link" href="sponsorizzazione.html">Sponsorizzazione</a>
-                      <a class="nav-link active" href="prodotti.html">Prodotti</a>
-                      <a class="nav-link" href="prodotto2.html">Nuovo prodotto</a>
-                      <a class="nav-link" aria-current="page" href="#">Clienti</a>
-                      <a class="nav-link mt-3" href="#">Impostazioni</a>
-                      <a class="nav-link" href="#">Profilo</a>
-                      <a class="nav-link" href="#">Esci</a>
-                    </div>
-                  </div>
+      </nav>
+      <!--Fine navbar-->
+
+      <!--Inizio Sidebar-->
+  
+    <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark d-none d-sm-block d-sm-none d-md-block  " style="width: 280px;">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+        <span class="fs-4">Bootstrap Dashboard</span>
+      </a>
+      <hr>
+      <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+          <a href="#" class="nav-link text-white " aria-current="page">
+            <i class="fa-solid fa-house me-3"></i>Dashboard
+          </a>
+        </li>
+        <li>
+          <a href="sponsorizzazione.html " class="nav-link text-white active">
+            <i class="fa-solid fa-chart-line me-3"></i>Sponsorizzazione
+          </a>
+        </li>
+        <li>
+          <a href="prodotti.html" class="nav-link text-white ">
+            <i class="fa-solid fa-box-archive me-3"> </i>Prodotti
+          </a>
+        </li>
+        <li>
+          <a href="prodotto2.html" class="nav-link text-white">
+            <i class="fa-solid fa-plus me-3"></i>Nuovi Prodotti
+          </a>
+        </li>
+        <li>
+          <a href="#" class="nav-link text-white">
+            <i class="fa-solid fa-user-tie me-3"></i>Clienti
+          </a>
+        </li>
+      </ul>
+      <hr>
+      <div class="dropdown vh-100">
+        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+          <strong>Mario Rossi</strong>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+          <li><a class="dropdown-item" href="#">Impostazioni</a></li>
+          <li><a class="dropdown-item" href="#">Profilo</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Esci</a></li>
+        </ul>
+      </div>
+    </div>
+    <!--Fine Sidebar-->
+
+    <div class="container mt-5 vw-100">
+      <div class="row justify-content-center">
+        <div class="col-12 text-center">
+          <div class="">
+            <h1>Trova il Piano perfetto per te</h1>
+          </div>
+          <div class="">
+            Scegli tra le nostre opzioni di abbonamento e goditi funzionalità esclusive e performance migliori
+          </div>
+          <div>
+            Porta la tua esperienza al livello successivo
+          </div>
+          <div class="mt-3">
+            <button type="button" class="btn btn-primary btn-lg rounded-pill">Large button</button>
+            <button type="button" class="btn btn-outline-secondary btn-lg rounded-pill">Large button</button>
+          </div>
+          <div class="row row-cols-1 row-cols-lg-3 mb-3 text-center mt-3">
+            <div class="col">
+              <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                  <h4 class="my-0 fw-normal">Gratis</h4>
                 </div>
-            </nav>
+                <div class="card-body">
+                  <h1 class="card-title pricing-card-title"> €0<small class="text-body-secondary fw-light">/mese</small></h1>
+                  <ul class="list-unstyled mt-3 mb-4">
+                    <li>10 utenti</li>
+                    <li>2 GB di spazio</li>
+                    <li>Pubblicità</li>
+                    <li>Supporto email</li>
+                  </ul>
+                  <button type="button" class="w-100 btn btn-lg btn-outline-primary">Prosegui</button>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                <div class="card-header py-3 text-bg-primary border-primary">
+                  <h4 class="my-0 fw-normal">Premium</h4>
+                </div>
+                <div class="card-body">
+                  <h1 class="card-title pricing-card-title"> €15<small class="text-body-secondary fw-light">/mese</small></h1>
+                  <ul class="list-unstyled mt-3 mb-4">
+                    <li>50 utenti</li>
+                    <li>10 GB di spazio</li>
+                    <li>Senza pubblicità</li>
+                    <li>Supporto email prioritario</li>
+                  </ul>
+                  <button type="button" class="w-100 btn btn-lg btn-primary">Prosegui</button>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                  <h4 class="my-0 fw-normal">Enterprise</h4>
+                </div>
+                <div class="card-body">
+                  <h1 class="card-title pricing-card-title"> €29<small class="text-body-secondary fw-light">/mese</small></h1>
+                  <ul class="list-unstyled mt-3 mb-4">
+                    <li>Utenti illimitati</li>
+                    <li>Spazio illimitati</li>
+                    <li>Senza pubblicità</li>
+                    <li>Supporto via email e chat</li>
+                  </ul>
+                  <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+                </div>
+              </div>
+            </div>
+            
+          </div>
         </div>
+      </div>
+    </div>
+
+
+    </main>
+          
+        </main>
         
 
 
-    </header>
     <!--Fine Header-->
 
     <!--Inizio Main-->
